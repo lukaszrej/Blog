@@ -1,0 +1,23 @@
+$padding-title-description: 14px;
+$padding-article: 18px;
+$padding-paragraph: 10px;
+
+.p-article {
+  padding-bottom: $padding-article;
+
+  &__title {
+    font-size: 1.4rem;
+    padding-bottom: $padding-title-description;
+  }
+  &__description {
+    font-size: 1.2rem;
+    padding-bottom: $padding-title-description;
+  }
+  p {
+    padding-bottom: $padding-paragraph;
+  }
+
+  p:last-of-type {
+    padding-bottom: 0;
+  }
+}
