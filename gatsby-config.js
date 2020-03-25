@@ -28,6 +28,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "BLOG",
+        fieldName: "blog",
+        url: "https://api.graphcms.com/simple/v1/swapi",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
