@@ -18,13 +18,11 @@ const Layout = ({ children }) => {
   `);
 
   return (
-      <>
+      <div className='p-page-container'>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <main className='p-main'>
-              {children}
-          </main>
+            {children}
           <Footer />
-      </>
+      </div>
   )
 };
 

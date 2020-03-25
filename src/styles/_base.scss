@@ -8,15 +8,12 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   color: #333333;
-  border-bottom: 4px dotted #E15543;
   transition: all .6s ease;
   padding-bottom: 4px;
 }
 
 a:hover {
-  padding-bottom: 8px;
-  font-size: 1.1rem;
-  border-width: thick;
+  color: #000000;
 }
 
 h1 {
