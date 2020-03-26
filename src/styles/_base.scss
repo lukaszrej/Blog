@@ -1,3 +1,11 @@
+::selection {
+  background: #ffa64d;
+}
+
+::-moz-selection {
+  background: #ffa64d;
+}
+
 body {
   color: #333333;
   background: #ffffff;
@@ -17,7 +25,6 @@ a:hover {
 }
 
 h1 {
-  font-size: 16px;
   margin-bottom: 0;
 
   a {
