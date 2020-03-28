@@ -4,17 +4,17 @@ import Layout from '../components/layout';
 
 const UserTemplate = ({ data }) => (
     <Layout>
-        <h1>{data.strapiUser.username}</h1>
-        <ul>
-            {data.strapiUser.articles.map(article => (
-                <li key={article.id}>
-                    <h2>
-                        <Link to={`/Article_${article.id}`}>{article.title}</Link>
-                    </h2>
-                    <p>{article.content}</p>
-                </li>
-            ))}
-        </ul>
+        <main className='p-main'>
+            <h2 className='p-article__title'>All articles from {data.strapiUser.username}</h2>
+                {data.strapiUser.articles.map(article => (
+                    <div key={article.id}>
+                        <h2>
+                            <Link to={`/Article_${article.id}`}>{article.title}</Link>
+                        </h2>
+                        <p>{article.content}</p>
+                    </div>
+                ))}
+        </main>
     </Layout>
 );
 
