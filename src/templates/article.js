@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-// import Img from 'gatsby-image';
 import Layout from '../components/layout';
 
 const ArticleTemplate = ({ data }) => (
     <Layout>
-        <h1>{data.strapiArticle.title}</h1>
-        <p>by <Link to={`/authors/User_${data.strapiArticle.author.id}`}>{data.strapiArticle.author.username}</Link></p>
-        {/*<Img fixed={data.strapiArticle.image.childImageSharp.fixed}/>*/}
-        <p>{data.strapiArticle.content}</p>
+        <main className="p-main">
+            <h2 className='p-article__title'>{data.strapiArticle.title}</h2>
+            <p className='p-article__date'>by <Link to={`/authors/User_${data.strapiArticle.author.id}`}>{data.strapiArticle.author.username}</Link></p>
+            <p className='p-article__content'>{data.strapiArticle.content}</p>
+            <Link to="/">Go Back</Link>
+        </main>
     </Layout>
 );
 

@@ -41,14 +41,6 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: "BLOG",
-        fieldName: "blog",
-        url: "https://api.graphcms.com/simple/v1/swapi",
-      },
-    },
-    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,

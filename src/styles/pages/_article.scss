@@ -4,20 +4,30 @@ $padding-paragraph: 10px;
 
 .p-article {
   padding-bottom: $padding-article;
+  margin-bottom: 1.45rem;
 
   &__title {
-    font-size: 1.4rem;
-    padding-bottom: $padding-title-description;
-  }
-  &__description {
     font-size: 1.2rem;
-    padding-bottom: $padding-title-description;
+    margin-bottom: .6rem;
+    padding-bottom: 0;
   }
+
+  &__date {
+    font-size: .8rem;
+    margin-bottom: .6rem;
+  }
+
+  &__content {
+    //font-size: 1.2rem;
+    //padding-bottom: $padding-title-description;
+  }
+
   p {
     padding-bottom: $padding-paragraph;
   }
 
   p:last-of-type {
     padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
