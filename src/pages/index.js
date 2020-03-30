@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import Moment from "react-moment";
+import 'moment-timezone';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -12,7 +14,10 @@ const IndexPage = ({ data }) => (
                 {data.allStrapiArticle.edges.map(document => (
                     <article key={document.node.id}>
                         <h2 className='p-article__title'><Link to={`/${document.node.id}`}>{document.node.title}</Link></h2>
-                        <p className='p-article__date'>Added {document.node.date} by <Link to={`/authors/User_${document.node.author.id}`}>{document.node.author.username}</Link></p>
+                        <p className='p-article__date'>
+                            Added <Moment format="DD-MM-YYYY">{document.node.date}</Moment> by <Link
+                            to={`/authors/User_${document.node.author.id}`}>{document.node.author.username}</Link>
+                        </p>
                         <p className='p-article__content'>{document.node.content}</p>
                     </article>
                 ))}
