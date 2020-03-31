@@ -24,6 +24,16 @@ a:hover {
   color: #000000;
 }
 
+.btn-link {
+  //background: orange;
+  border: 1px solid orange;
+}
+
+.btn-link:hover {
+  background: orange;
+  transition: .6s;
+}
+
 h1 {
   margin-bottom: 0;
 

@@ -21,6 +21,7 @@ export const query = graphql`
   query ArticleTemplate($id: String!) {
     strapiArticle(id: {eq: $id}) {
       title
+      excerpt
       content
       author {
         id
