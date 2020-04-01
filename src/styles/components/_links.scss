@@ -1,0 +1,27 @@
+.c-link__author {
+  background: #ffbf80;
+  padding: 4px;
+
+  @include selection-dark;
+
+  &:hover {
+    color: #000000;
+    transition: .6s;
+  }
+}
+
+.c-link__title {
+  margin-bottom: .6rem;
+}
+
+.c-link__read-more, .c-link__back {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  text-decoration: underline;
+
+  @include selection-dark;
+
+  &:hover {
+    color: #000000;
+  }
+}

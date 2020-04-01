@@ -10,6 +10,12 @@ $padding-paragraph: 10px;
     font-size: 1.2rem;
     margin-bottom: .6rem;
     padding-bottom: 0;
+
+    &-from-author {
+      margin-bottom: 1.2rem;
+      font-size: 1.2rem;
+      text-decoration: underline;
+    }
   }
 
   &__date {
@@ -17,7 +23,8 @@ $padding-paragraph: 10px;
     margin-bottom: .6rem;
   }
 
-  &__content {
+  &__excerpt > p {
+    margin-bottom: .8rem;
   }
 
   p {

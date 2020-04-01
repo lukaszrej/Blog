@@ -1,20 +1,13 @@
-::selection {
-  background: #ffa64d;
-}
-
-::-moz-selection {
-  background: #ffa64d;
-}
+@include selection;
 
 body {
-  color: #333333;
+  color: #404040;
   background: #ffffff;
   line-height: 1.625;
 }
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
   color: #333333;
   transition: all .6s ease;
   padding-bottom: 4px;
@@ -22,16 +15,6 @@ a {
 
 a:hover {
   color: #000000;
-}
-
-.btn-link {
-  //background: orange;
-  border: 1px solid orange;
-}
-
-.btn-link:hover {
-  background: orange;
-  transition: .6s;
 }
 
 h1 {
