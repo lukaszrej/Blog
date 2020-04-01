@@ -16,16 +16,14 @@ const IndexPage = ({ data }) => (
                     <article key={document.node.id}>
                         <h2 className='p-article__title'><Link to={`/${document.node.id}`}>{document.node.title}</Link></h2>
                         <p className='p-article__date'>
-                            Added <Moment format="DD-MM-YYYY">{document.node.date}</Moment> by
-                            <span className='btn-link'><Link
-                            to={`/authors/User_${document.node.author.id}`}>{document.node.author.username}</Link></span>
+                            Added <Moment format="DD-MM-YYYY">{document.node.date}</Moment> by <Link
+                            className='c-link__author' to={`/authors/User_${document.node.author.id}`}>{document.node.author.username}</Link>
                         </p>
-                        <ReactMarkdown className='p-article__content' source={document.node.excerpt} />
-                        <span><Link to={`/${document.node.id}`}>Read more</Link></span>
+                        <ReactMarkdown className='p-article__excerpt' source={document.node.excerpt} />
+                        <Link className='c-link__read-more' to={`/${document.node.id}`}>Read more</Link>
                     </article>
                 ))}
             </section>
-            <Link to="/contact/">Contact</Link>
         </main>
     </Layout>
 );

@@ -7,10 +7,12 @@ import Layout from '../components/layout';
 const ArticleTemplate = ({ data }) => (
     <Layout>
         <main className="p-main">
-            <h2 className='p-article__title'>{data.strapiArticle.title}</h2>
-            <p className='p-article__date'>by <Link to={`/authors/User_${data.strapiArticle.author.id}`}>{data.strapiArticle.author.username}</Link></p>
-            <ReactMarkdown className='p-article__content' source={data.strapiArticle.content} />
-            <Link to="/">Go Back</Link>
+            <section className="p-articles">
+                <h2 className='p-article__title'>{data.strapiArticle.title}</h2>
+                <p className='p-article__date'>by <Link className='c-link__author' to={`/authors/User_${data.strapiArticle.author.id}`}>{data.strapiArticle.author.username}</Link></p>
+                <ReactMarkdown source={data.strapiArticle.content} />
+                <Link className='c-link__back' to="/">Go Back</Link>
+            </section>
         </main>
     </Layout>
 );

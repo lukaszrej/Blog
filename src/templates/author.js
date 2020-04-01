@@ -1,19 +1,20 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import ReactMarkdown from "react-markdown";
+
 import Layout from '../components/layout';
 
 const UserTemplate = ({ data }) => (
     <Layout>
         <main className='p-main'>
-            <h2 className='p-article__title'>All articles from {data.strapiUser.username}</h2>
+            <h2 className='p-article__title-from-author'>All articles from {data.strapiUser.username}</h2>
                 {data.strapiUser.articles.map(article => (
                     <div key={article.id}>
-                        <h2>
-                            <Link to={`/Article_${article.id}`}>{article.title}</Link>
-                        </h2>
-                        <p>{article.content}</p>
+                        <h2 className='p-article__title'>{article.title}</h2>
+                        <ReactMarkdown source={article.content} />
                     </div>
                 ))}
+            <Link className='c-link__back' to="/">Go Back</Link>
         </main>
     </Layout>
 );

@@ -2,13 +2,11 @@
   height: 200px;
   text-align: center;
   box-shadow: 0 0 20px rgba(0,0,0,.05);
-  background: #ffa64d;
-  color: #333333;
+  background: #333333;
+  color: #ffbf80;
   margin-top: auto;
 
-  ::selection {
-    background: #333333;
-  }
+  @include selection;
 
   &__content {
     position: relative;

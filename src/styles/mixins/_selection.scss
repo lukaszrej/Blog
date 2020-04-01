@@ -1,0 +1,21 @@
+@mixin selection {
+  &::selection {
+    background: #ffbf80;
+  }
+
+  &::-moz-selection {
+    background: #ffbf80;
+  }
+}
+
+@mixin selection-dark {
+  &::selection {
+    background: #333333;
+    color: white;
+  }
+
+  &::-moz-selection {
+    background: #333333;
+    color: white;
+  }
+}
