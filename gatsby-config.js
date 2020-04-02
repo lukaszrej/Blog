@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog Pro`,
-    description: `Blog. Build with Gatsby JS.`,
-    author: `Autor Sukcesu`,
+    title: `Blog`,
+    description: `Blog. Build with Gatsby JS and Strapi as a headless CMS.`,
+    author: `Łukasz Rej`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,7 +21,8 @@ module.exports = {
         contentTypes:
             [
               `article`,
-              `user`
+              `user`,
+              `category`
             ],
       },
     },

@@ -67,9 +67,34 @@ exports.createPages = ({ actions, graphql }) => {
         })
     });
 
+    const getCategories = makeRequest(graphql, `
+    {
+      allStrapiCategory {
+        edges {
+          node {
+            id
+            category
+          }
+        }
+      }
+    }
+    `).then(result => {
+        // Create pages for each user.
+        result.data.allStrapiCategory.edges.forEach(({ node }) => {
+            createPage({
+                path: `/${node.id}`,
+                component: path.resolve(`src/templates/category.js`),
+                context: {
+                    id: node.id,
+                },
+            })
+        })
+    });
+
     // Queries for articles and authors nodes to use in creating pages.
     return Promise.all([
         getArticles,
         getAuthors,
+        getCategories
     ])
 };
