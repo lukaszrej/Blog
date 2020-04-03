@@ -21,6 +21,7 @@ const IndexPage = ({ data }) => (
                         </p>
                         <ReactMarkdown className='p-article__excerpt' source={document.node.excerpt} />
                         <Link className='c-link__read-more' to={`/${document.node.id}`}>Read more</Link>
+                        <Link to={`/Category_${document.node.category.id}`}>{document.node.category.category}</Link>
                     </article>
                 ))}
             </section>
@@ -39,6 +40,10 @@ export const pageQuery = graphql`
                     title
                     date
                     excerpt
+                    category {
+                        id
+                        category
+                    }
                     content
                     author {
                         id
