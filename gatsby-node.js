@@ -26,6 +26,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
+            slug
           }
         }
       }
@@ -35,7 +36,7 @@ exports.createPages = ({ actions, graphql }) => {
         result.data.allStrapiArticle.edges.forEach(({ node }) => {
 
             createPage({
-                path: `/${node.id}`,
+                path: `/${node.slug}`,
                 component: path.resolve(`src/templates/article.js`),
                 context: {
                     id: node.id,
@@ -51,6 +52,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             username
+            slug
           }
         }
       }
@@ -59,7 +61,7 @@ exports.createPages = ({ actions, graphql }) => {
         // Create pages for each user
         result.data.allStrapiUser.edges.forEach(({ node }) => {
             createPage({
-                path: `/authors/${node.id}`,
+                path: `/author/${node.slug}`,
                 component: path.resolve(`src/templates/author.js`),
                 context: {
                     id: node.id,
@@ -75,6 +77,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             category
+            slug
           }
         }
       }
@@ -83,7 +86,7 @@ exports.createPages = ({ actions, graphql }) => {
         // Create pages for each user.
         result.data.allStrapiCategory.edges.forEach(({ node }) => {
             createPage({
-                path: `/${node.id}`,
+                path: `/category/${node.slug}`,
                 component: path.resolve(`src/templates/category.js`),
                 context: {
                     id: node.id,

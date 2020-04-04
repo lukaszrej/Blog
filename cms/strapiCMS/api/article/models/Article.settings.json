@@ -39,6 +39,10 @@
     "category": {
       "model": "category",
       "via": "articles"
+    },
+    "slug": {
+      "unique": true,
+      "type": "string"
     }
   }
 }

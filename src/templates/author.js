@@ -7,7 +7,9 @@ import Layout from '../components/layout';
 const UserTemplate = ({ data }) => (
     <Layout>
         <main className='p-main'>
-            <h2 className='p-article__title-from-author'>All articles from {data.strapiUser.username}</h2>
+            <h2 className='p-article__title-from-author'>
+                All articles from <span className='p-article__author'>{data.strapiUser.username}</span>
+            </h2>
                 {data.strapiUser.articles.map(article => (
                     <div key={article.id}>
                         <h2 className='p-article__title'>{article.title}</h2>

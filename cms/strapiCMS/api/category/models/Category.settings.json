@@ -18,6 +18,10 @@
     "articles": {
       "collection": "article",
       "via": "category"
+    },
+    "slug": {
+      "unique": true,
+      "type": "string"
     }
   }
 }
