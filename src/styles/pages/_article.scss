@@ -8,7 +8,7 @@ $padding-paragraph: 10px;
 
   &__title {
     font-size: 1.2rem;
-    margin-bottom: .6rem;
+    margin-bottom: .8rem;
     padding-bottom: 0;
 
     &-from-author {
@@ -23,8 +23,12 @@ $padding-paragraph: 10px;
     margin-bottom: .6rem;
   }
 
+  &__tag {
+    margin-bottom: .6rem;
+  }
+
   &__excerpt > p {
-    margin-bottom: .8rem;
+    margin-bottom: .4rem;
   }
 
   p {
