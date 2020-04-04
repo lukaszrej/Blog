@@ -7,8 +7,6 @@ import 'moment-timezone';
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-// const input = ;
-
 const IndexPage = ({ data }) => (
     <Layout>
         <SEO title="Home" />
