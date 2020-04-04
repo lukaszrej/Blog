@@ -9,7 +9,12 @@ const ArticleTemplate = ({ data }) => (
         <main className="p-main">
             <section className="p-articles">
                 <h2 className='p-article__title'>{data.strapiArticle.title}</h2>
-                <p className='p-article__date'>by <Link className='c-link__author' to={`/authors/User_${data.strapiArticle.author.id}`}>{data.strapiArticle.author.username}</Link></p>
+                <p className='p-article__date'>
+                    &nbsp;by&nbsp;<Link className='c-link__author' to={`/authors/User_${data.strapiArticle.author.id}`}>
+                        {data.strapiArticle.author.username}</Link>
+                    &nbsp;in&nbsp;<Link className='c-link__category c-link__category-underline' to={`/Category_${data.strapiArticle.category.id}`}>
+                        {data.strapiArticle.category.category}</Link>
+                </p>
                 <ReactMarkdown source={data.strapiArticle.content} />
                 <Link className='c-link__back' to="/">Go Back</Link>
             </section>
@@ -28,6 +33,10 @@ export const query = graphql`
       author {
         id
         username
+      }
+      category {
+        category
+        id
       }
     }
   }
