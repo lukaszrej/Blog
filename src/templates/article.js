@@ -40,6 +40,10 @@ export const query = graphql`
         id
         slug
       }
+      category {
+        category
+        id
+      }
     }
   }
 `;
