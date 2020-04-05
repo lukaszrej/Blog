@@ -6,12 +6,11 @@ import SEO from "../components/seo";
 
 const ContactPage = () => (
   <Layout>
+      <SEO title="Contact" />
       <main className="p-main">
-          <SEO title="Contact page" />
-          <h1>Contact</h1>
+          <h1 className='p-contact__title'>Contact</h1>
           <p>If you need contact write me an email kid.</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <Link to="/">Back to the homepage</Link>
+          <Link className='c-link__back' to="/">Go Back</Link>
       </main>
   </Layout>
 );

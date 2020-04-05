@@ -3,9 +3,11 @@ import { Link, graphql } from 'gatsby';
 import ReactMarkdown from "react-markdown";
 
 import Layout from '../components/layout';
+import SEO from "../components/seo";
 
 const UserTemplate = ({ data }) => (
     <Layout>
+        <SEO title={`All articles from ${data.strapiUser.username}`}/>
         <main className='p-main'>
             <h2 className='p-article__title-from-author'>
                 All articles from <span className='p-article__author'>{data.strapiUser.username}</span>
