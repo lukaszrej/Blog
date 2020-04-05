@@ -3,9 +3,11 @@ import { Link, graphql } from 'gatsby';
 import ReactMarkdown from "react-markdown";
 
 import Layout from '../components/layout';
+import SEO from "../components/seo";
 
 const ArticleTemplate = ({ data }) => (
     <Layout>
+        <SEO title={data.strapiArticle.title} />
         <main className="p-main">
             <section className="p-articles">
                 <h2 className='p-article__title'>{data.strapiArticle.title}</h2>

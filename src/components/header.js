@@ -4,9 +4,9 @@ import React from "react";
 
 const Header = ({ siteTitle }) => (
   <header className='p-header'>
-      <div className='p-header__content'>
-          <h1><Link to="/">{siteTitle}</Link></h1>
-      </div>
+      <section className='p-header__content'>
+          <h1><Link className='c-link__title' to="/">{siteTitle}</Link></h1>
+      </section>
   </header>
 );
 
