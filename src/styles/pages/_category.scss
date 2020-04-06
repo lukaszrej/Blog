@@ -1,0 +1,18 @@
+.c-category {
+
+  &__title {
+    font-size: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 1.2rem;
+
+    @include selection-dark;
+  }
+
+  &__name {
+    padding: 4px;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    background: #404040;
+    color: #ffffff;
+  }
+}

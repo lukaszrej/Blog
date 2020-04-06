@@ -8,19 +8,19 @@ import SEO from "../components/seo";
 const ArticleTemplate = ({ data }) => (
     <Layout>
         <SEO title={data.strapiArticle.title} />
-        <main className="p-main">
-            <section className="p-articles">
-                <h2 className='p-article__title'>{data.strapiArticle.title}</h2>
-                <p className='p-article__date'>
-                    &nbsp;by&nbsp;<Link className='c-link__author' to={`/author/${data.strapiArticle.author.slug}`}>
-                        {data.strapiArticle.author.username}</Link>
-                    &nbsp;in&nbsp;<Link className='c-link__category c-link__category-underline' to={`/category/${data.strapiArticle.category.slug}`}>
-                        {data.strapiArticle.category.category}</Link>
-                </p>
-                <ReactMarkdown source={data.strapiArticle.content} />
-                <Link className='c-link__back' to="/">Go Back</Link>
-            </section>
-        </main>
+
+        <article className="c-article">
+            <h2 className='c-article__title'>{data.strapiArticle.title}</h2>
+            <p className='c-article__details'>
+                by <Link className='c-link__author' to={`/author/${data.strapiArticle.author.slug}`}>
+                {data.strapiArticle.author.username}</Link>&nbsp;
+                in <Link className='c-link__category c-link__category-underline'
+                         to={`/category/${data.strapiArticle.category.slug}`}>{data.strapiArticle.category.category}</Link>
+            </p>
+            <ReactMarkdown source={data.strapiArticle.content} />
+        </article>
+
+        <Link className='c-link__back' to="/">Go Back</Link>
     </Layout>
 );
 

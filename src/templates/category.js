@@ -8,21 +8,23 @@ import SEO from "../components/seo";
 const CategoryTemplate = ({ data }) => (
     <Layout>
         <SEO title={`All articles from the category ${data.strapiCategory.category}`}/>
-        <main className="p-main">
-            <section className="p-articles">
-                <h2 className='p-article__title p-article__title-category'>
-                    Articles from the category <span className='p-article__category'>{data.strapiCategory.category}</span>
-                </h2>
-                {data.strapiCategory.articles.map(article => (
-                    <div key={article.id}>
-                        <h2 className='p-article__title'>{article.title}</h2>
-                        <ReactMarkdown className='p-article__excerpt' source={article.excerpt} />
-                        <Link className='c-link__read-more' to={`/${article.slug}`}>Read more</Link>
-                    </div>
-                ))}
-                <Link className='c-link__back' to="/">Go Back</Link>
-            </section>
-        </main>
+
+        <section className="c-category">
+            <h2 className='c-category__title'>
+                Articles from the category <span className='c-category__name'>{data.strapiCategory.category}</span>
+            </h2>
+            {data.strapiCategory.articles.map(article => (
+                <article className='c-article' key={article.id}>
+                    <h2 className='c-article__title'>
+                        <Link className='c-link__title' to={`/${article.slug}`}>{article.title}</Link>
+                    </h2>
+                    <ReactMarkdown className='c-article__excerpt' source={article.excerpt} />
+                    <Link className='c-link__read-more' to={`/${article.slug}`}>Read more</Link>
+                </article>
+            ))}
+        </section>
+
+        <Link className='c-link__back' to="/">Go Back</Link>
     </Layout>
 );
 
