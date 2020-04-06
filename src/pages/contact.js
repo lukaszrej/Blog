@@ -7,11 +7,13 @@ import SEO from "../components/seo";
 const ContactPage = () => (
   <Layout>
       <SEO title="Contact" />
-      <main className="p-main">
+
+      <section className="p-contact">
           <h1 className='p-contact__title'>Contact</h1>
           <p>If you need contact write me an email kid.</p>
-          <Link className='c-link__back' to="/">Go Back</Link>
-      </main>
+      </section>
+
+      <Link className='c-link__back' to="/">Go Back</Link>
   </Layout>
 );
 
