@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-strapi-blog",
+  "name": "gatsby-starter-default",
   "private": true,
-  "description": "A blog created with Gatsby and Strapi (as a headless CMS)",
-  "version": "1.0",
-  "author": "Łukasz Rej <rejlukasz@gmail.com>",
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^2.19.32",
     "gatsby-image": "^2.2.39",
@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lukaszrej/Blog.git"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
