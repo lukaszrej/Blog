@@ -4,6 +4,7 @@ module.exports = {
     description: `Blog. Build with Gatsby JS and Strapi as a headless CMS.`,
     author: `Łukasz Rej`,
   },
+  pathPrefix: "/Blog",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
