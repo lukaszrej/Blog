@@ -36,3 +36,12 @@ During installation, you need to use Node.js in a version at least 10.
 - see the result on the ```http://localhost:8000/```
 - if you are seeing some problems with fetching content - go to Strapi panel and check the roles for Users/Articles/Categories 
 - to build a production version of your instance run ```npm build```
+
+#### Preview
+
+![View](./assets/view1.png "Landing page view")
+
+![View](./assets/view2.png "Category page view")
+
+![View](./assets/view3.png "Author page view")
+
