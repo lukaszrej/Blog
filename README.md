@@ -1,21 +1,21 @@
-## Blog
+# Blog
 
-###Demo
+### Demo
 See the demo on github pages [here](https://lukaszrej.github.io/Blog/). \
 Content in the demo is injected directly from a headless CMS.
 
-###Technologies used for this project
+### Technologies used for this project
 
 - [GatsbyJS](https://www.gatsbyjs.org/)
 - [Strapi](https://strapi.io/)
 - [SCSS](https://sass-lang.com/)
 
-###Configuration
+### Configuration
 
 If you're creating new instance of the blog, process the below actions.\
 During installation, you need to use Node.js in a version at least 10.
 
-####1. Install Strapi (to create users, articles and categories)
+#### 1. Install Strapi (to create users, articles and categories)
 
 - make sure you are using at least Node.js version >=10
 - clone the repo using ```$ git clone```
@@ -27,7 +27,7 @@ During installation, you need to use Node.js in a version at least 10.
 - create additional users and insert content for articles and categories
 - change the permissions for Users, Articles and Categories in the ```Roles and Permissions```-tab under ```Public``` ('find' and 'findone')
 
-####2. Install and run GatbsyJS (to see the result)
+#### 2. Install and run GatbsyJS (to see the result)
 
 - make sure you are using at least Node.js version >=10
 - open new terminal in the main folder
